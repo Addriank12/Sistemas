@@ -45,7 +45,7 @@ public class CarController {
         HttpClient client = HttpClient.newHttpClient();
         String carJson = objectMapper.writeValueAsString(carModel);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(BASE_URL + "/" + carId))
+                .uri(URI.create(BASE_URL))
                 .header("Content-Type", "application/json")
                 .PUT(HttpRequest.BodyPublishers.ofString(carJson))
                 .build();
